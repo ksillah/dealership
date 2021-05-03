@@ -85,19 +85,19 @@ BEGIN
 	VALUES(_invoice_id, _customer_id, _salesperson_id, _car_id);
 END;
 $MAIN$
-LANGUAGE  plpgsql;*/
+LANGUAGE  plpgsql;
 
 SELECT add_invoice(1,1,2,1);
-/*SELECT add_invoice(2,2,1,2);
+SELECT add_invoice(2,2,1,2);
 SELECT add_invoice(3,3,2,3);
 
-SELECT * FROM invoice
+SELECT * FROM invoice*/
 
-SELECT customer.customer_id, customer.first_name,salesperson.salesperson_id, salesperson.first_name, make, model, _year
+SELECT customer.customer_id, customer.first_name,salesperson.salesperson_id, salesperson.first_name, make, model, _year, price
 FROM customer
 JOIN car
 ON customer.customer_id=car.customer_id
 JOIN salesperson
-ON car.salesperson_id=salesperson.salesperson_id;*/
+ON car.salesperson_id=salesperson.salesperson_id;
 
 	
